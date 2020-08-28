@@ -32,6 +32,7 @@ public class Cliente implements Serializable {
 
     @Getter @Setter
     @NotEmpty
+    @Email
     private String email;
 
     @Column(name = "create_at") //para indicar como se llamaria la columna en la DB, standar separado por _
@@ -39,7 +40,6 @@ public class Cliente implements Serializable {
     @Getter @Setter
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @NotNull
-    @Email
     private Date createAt;
 
     private static final long serialVersionUID = 1L;
